@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Mapper
-public interface ItemMapper {
+    public interface ItemMapper {
 
-    void save(Item item);
+        void save(Item item);
 
-    void update(@Param("id") Long id, @Param("updateParam")ItemUpdateDto updateParam);
+        void update(@Param("id") Long id, @Param("updateParam")ItemUpdateDto updateParam);
 
-    List<Item> findAll(ItemSearchCond itemSearchCond);
+        List<Item> findAll(ItemSearchCond itemSearchCond);
 
-    Optional<Item> findById(Long id);
+        Optional<Item> findById(Long id);
 }

@@ -4,14 +4,18 @@ import hello.itemservice.domain.Item;
 import hello.itemservice.repository.ItemRepository;
 import hello.itemservice.repository.ItemSearchCond;
 import hello.itemservice.repository.ItemUpdateDto;
+import hello.itemservice.repository.mybatis.ItemMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ObjectUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Repository
 public class MemoryItemRepository implements ItemRepository {
+
 
     private static final Map<Long, Item> store = new HashMap<>(); //static
     private static long sequence = 0L; //static
